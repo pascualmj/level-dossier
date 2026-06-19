@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Level — Dossier de prensa</title>
+<meta name="description" content="Dossier de prensa de Level: bebida funcional en polvo. Rosario, Argentina.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Inter:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --marino:#073B7C;
+    --azul:#1763D6;
+    --celeste:#6FA8EC;
+    --bruma:#E9F2FC;
+    --magenta:#E5398A;
+    --tinta:#0D1626;
+    --piedra:#5A6675;
+    --hueso:#F6F8FB;
+    --linea:rgba(13,22,38,.10);
+    --display:"Space Grotesk",sans-serif;
+    --body:"Inter",sans-serif;
+    --mono:"Space Mono",monospace;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:var(--body);
+    color:var(--tinta);
+    background:var(--hueso);
+    line-height:1.7;
+    -webkit-font-smoothing:antialiased;
+    font-size:17px;
+  }
+  .sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+  a{color:inherit}
+  ::selection{background:var(--magenta);color:#fff}
+
+  /* ---------- HERO ---------- */
+  .hero{
+    background:var(--celeste);
+    color:var(--marino);
+    min-height:92vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    padding:6vh 8vw;
+    position:relative;
+    overflow:hidden;
+  }
+  .hero__eyebrow{
+    font-family:var(--mono);
+    font-size:13px;
+    letter-spacing:.18em;
+    text-transform:uppercase;
+    color:var(--marino);
+    display:flex;
+    align-items:center;
+    gap:14px;
+    margin-bottom:7vh;
+  }
+  .hero__eyebrow::before{content:"";width:10px;height:10px;background:var(--magenta);display:inline-block}
+  .hero__logo{width:min(46vw,420px);height:auto;color:var(--marino);display:block}
+  .hero__title{
+    font-family:var(--display);font-weight:500;
+    font-size:clamp(1.6rem,3.8vw,3rem);letter-spacing:-.02em;line-height:1.1;
+    margin-top:7vh;max-width:22ch;
+    color:var(--marino);
+  }
+  .hero__title em{color:#fff;font-style:normal}
+  .hero__sub{
+    font-family:var(--mono);font-size:14px;letter-spacing:.06em;
+    color:rgba(7,59,124,.7);margin-top:18px;
+  }
+  .hero__line{
+    position:absolute;
+    left:8vw;right:8vw;bottom:6vh;
+    height:1px;background:rgba(7,59,124,.22);
+  }
+  .hero__line::after{content:"";position:absolute;left:0;top:-4px;width:9px;height:9px;background:var(--magenta)}
+  .hero__meta{
+    position:absolute;right:8vw;bottom:6vh;transform:translateY(50%);
+    font-family:var(--mono);font-size:12px;letter-spacing:.14em;color:rgba(7,59,124,.6);
+    background:var(--celeste);padding-left:14px;
+  }
+
+  /* ---------- LAYOUT ---------- */
+  .shell{display:flex;align-items:flex-start;max-width:1240px;margin:0 auto}
+  .nav{
+    position:sticky;top:0;
+    width:230px;flex:0 0 230px;
+    height:100vh;
+    padding:48px 24px;
+    border-right:1px solid var(--linea);
+  }
+  .nav__brand{
+    display:flex;align-items:center;gap:10px;
+    font-family:var(--mono);font-size:12px;letter-spacing:.12em;
+    color:var(--piedra);text-transform:uppercase;margin-bottom:36px;
+  }
+  .nav__brand svg{width:64px;height:auto;color:var(--marino)}
+  .nav ol{list-style:none}
+  .nav li{margin:2px 0}
+  .nav a{
+    display:flex;gap:12px;align-items:baseline;
+    text-decoration:none;color:var(--piedra);
+    font-size:15px;padding:8px 10px;border-radius:7px;
+    transition:color .2s,background .2s;
+  }
+  .nav a .n{font-family:var(--mono);font-size:12px;color:var(--celeste)}
+  .nav a:hover{color:var(--marino);background:var(--bruma)}
+  .nav a.active{color:var(--marino);background:var(--bruma)}
+  .nav a.active .n{color:var(--magenta)}
+
+  .main{flex:1 1 auto;min-width:0;padding:0 8vw 12vh;max-width:920px}
+
+  /* ---------- SECTION SHELL ---------- */
+  .section{padding:14vh 0 0}
+  .section:first-child{padding-top:12vh}
+  .eyebrow{
+    display:flex;align-items:center;gap:12px;
+    font-family:var(--mono);font-size:12px;letter-spacing:.16em;
+    text-transform:uppercase;color:var(--piedra);margin-bottom:22px;
+  }
+  .eyebrow .tick{width:9px;height:9px;background:var(--magenta);flex:0 0 auto}
+  .eyebrow .num{color:var(--azul)}
+  h2.title{
+    font-family:var(--display);font-weight:500;
+    font-size:clamp(2rem,4.2vw,2.9rem);letter-spacing:-.02em;
+    line-height:1.08;color:var(--marino);margin-bottom:18px;
+  }
+  .lede{font-size:1.18rem;color:var(--tinta);max-width:60ch;margin-bottom:8px}
+  p.body{max-width:62ch;margin-bottom:16px;color:#26303f}
+  h3.sub{
+    font-family:var(--display);font-weight:500;font-size:1.15rem;
+    color:var(--marino);margin:42px 0 16px;letter-spacing:-.01em;
+  }
+
+  /* ---------- ATTRS / CLAIMS (reused) ---------- */
+  .attrs{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px;margin:34px 0 8px}
+  .attr{background:#fff;border:1px solid var(--linea);border-radius:12px;padding:20px}
+  .attr h4{font-family:var(--display);font-weight:500;color:var(--marino);font-size:1.05rem;margin-bottom:6px}
+  .attr p{font-size:.95rem;color:var(--piedra);line-height:1.55}
+  .claims{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px}
+  .claim{
+    font-family:var(--mono);font-size:12px;letter-spacing:.06em;
+    color:var(--marino);background:var(--bruma);
+    border:1px solid var(--celeste);border-radius:40px;padding:8px 16px;
+  }
+  .pantone{display:flex;gap:12px;align-items:flex-start;background:var(--bruma);border-radius:12px;padding:18px 20px;margin-top:26px}
+  .pantone svg{flex:0 0 auto;width:18px;height:18px;color:var(--azul);margin-top:3px}
+  .pantone p{font-size:.95rem;color:#26303f;margin:0}
+
+  /* ---------- DATOS CLAVE ---------- */
+  .datos{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin:30px 0 6px}
+  .dato{background:#fff;border:1px solid var(--linea);border-radius:12px;padding:18px 20px}
+  .dato h5{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--azul);margin-bottom:8px;font-weight:400}
+  .dato p{font-family:var(--display);font-weight:500;font-size:1.15rem;color:var(--marino)}
+
+  /* ---------- FUNDADORES ---------- */
+  .founders{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin:30px 0 6px}
+  .founder{background:#fff;border:1px solid var(--linea);border-radius:12px;padding:22px 22px}
+  .founder h4{font-family:var(--display);font-weight:500;font-size:1.1rem;color:var(--marino);margin-bottom:4px}
+  .founder .role{font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--azul);display:block;margin-bottom:12px}
+  .founder p.bio{font-size:.92rem;color:var(--piedra);line-height:1.55}
+  .founder p.bio.placeholder{color:#A9536F;font-style:italic}
+
+  /* ---------- DOWNLOADS / CTA BUTTON (reused) ---------- */
+  .downloads{display:flex;flex-wrap:wrap;gap:12px;margin:8px 0 6px}
+  .dl{
+    display:inline-flex;align-items:center;gap:10px;cursor:pointer;
+    font-family:var(--body);font-size:15px;font-weight:500;color:#fff;
+    background:var(--azul);border:none;border-radius:9px;padding:12px 20px;
+    transition:background .18s,transform .05s;text-decoration:none;
+  }
+  .dl:hover{background:var(--marino)}
+  .dl:active{transform:scale(.985)}
+  .dl.ghost{background:transparent;color:var(--marino);border:1px solid var(--azul)}
+  .dl.ghost:hover{background:var(--bruma)}
+  .dl svg{width:16px;height:16px}
+
+  /* ---------- INGREDIENTES (registros reused pattern) ---------- */
+  .registros{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin:18px 0 0}
+  .reg{background:var(--bruma);border-radius:12px;padding:16px 18px}
+  .reg h5{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--azul);margin-bottom:7px;font-weight:400}
+  .reg p{font-size:.92rem;color:#26303f;line-height:1.5}
+
+  /* ---------- FAQ ---------- */
+  .faq{display:flex;flex-direction:column;gap:12px;margin:24px 0 0}
+  .faq-item{background:#fff;border:1px solid var(--linea);border-radius:12px;padding:18px 20px}
+  .faq-item h4{font-family:var(--display);font-weight:500;font-size:1rem;color:var(--marino);margin-bottom:8px}
+  .faq-item p{font-size:.95rem;color:#26303f;line-height:1.55}
+
+  /* ---------- CONTACTO ---------- */
+  .contact-card{
+    background:#fff;border:1px solid var(--linea);border-radius:14px;
+    padding:28px 30px;margin-top:28px;max-width:60ch;
+  }
+  .contact-card .cname{font-family:var(--display);font-weight:500;font-size:1.2rem;color:var(--marino);margin-bottom:2px}
+  .contact-card .crole{font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--azul);display:block;margin-bottom:18px}
+  .contact-row{display:flex;align-items:center;gap:10px;padding:8px 0;border-top:1px solid var(--linea);font-size:.95rem}
+  .contact-row:first-of-type{border-top:none}
+  .contact-row svg{width:16px;height:16px;color:var(--piedra);flex:0 0 auto}
+  .contact-row a{color:var(--marino);text-decoration:none}
+  .contact-row a:hover{color:var(--magenta)}
+
+  /* ---------- FOOTER ---------- */
+  footer{background:var(--celeste);color:var(--marino);padding:9vh 8vw;margin-top:14vh}
+  footer .flogo{width:150px;color:var(--marino);margin-bottom:24px}
+  footer p{color:rgba(7,59,124,.75);font-size:.95rem;max-width:46ch}
+  footer .fmeta{font-family:var(--mono);font-size:12px;letter-spacing:.12em;color:var(--marino);margin-top:28px;text-transform:uppercase}
+
+  /* ---------- RESPONSIVE ---------- */
+  @media (max-width:900px){
+    .shell{flex-direction:column}
+    .nav{position:sticky;top:0;width:100%;flex:none;height:auto;display:flex;align-items:center;gap:16px;
+      padding:12px 5vw;border-right:none;border-bottom:1px solid var(--linea);background:rgba(246,248,251,.92);
+      backdrop-filter:blur(8px);overflow-x:auto;z-index:20}
+    .nav__brand{margin:0;flex:0 0 auto}
+    .nav__brand svg{width:56px}
+    .nav ol{display:flex;gap:4px}
+    .nav a{white-space:nowrap;padding:6px 10px}
+    .nav a .n{display:none}
+    .main{padding:0 6vw 12vh;max-width:none}
+  }
+  @media (max-width:520px){
+    body{font-size:16px}
+    .hero{padding:8vh 7vw}
+  }
+  @media (prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto}
+    *{transition:none!important}
+  }
+  :focus-visible{outline:2px solid var(--magenta);outline-offset:3px;border-radius:3px}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="level-logo" viewBox="0 0 200 66">
+    <path fill="currentColor" d="M191.727 7.86315V6.49022H193.497C193.803 6.49022 194.047 6.39661 194.23 6.2094C194.434 6.02218 194.535 5.79336 194.535 5.52293C194.535 5.2525 194.444 5.03408 194.261 4.86767C194.077 4.70125 193.833 4.61804 193.528 4.61804H191.727V3.21391H193.497C194.332 3.21391 194.983 3.42193 195.451 3.83797C195.94 4.25401 196.184 4.81566 196.184 5.52293C196.184 6.2094 195.919 6.77105 195.39 7.20789C194.861 7.64473 194.2 7.86315 193.406 7.86315H191.727ZM190.658 10.297V3.21391H192.246V10.297H190.658ZM194.566 10.297C194.505 9.98496 194.403 9.65213 194.261 9.29849C194.139 8.94486 193.925 8.60162 193.62 8.26879C193.335 7.93596 192.887 7.64473 192.276 7.39511L193.833 6.92707C194.525 7.3431 195.054 7.83195 195.421 8.39361C195.807 8.95526 196.072 9.58972 196.214 10.297H194.566ZM193.162 13.6981C191.839 13.6981 190.658 13.3965 189.62 12.7932C188.582 12.19 187.768 11.3683 187.178 10.3282C186.588 9.28809 186.293 8.11278 186.293 6.80225C186.293 5.53333 186.588 4.38922 187.178 3.36992C187.768 2.32982 188.582 1.50815 189.62 0.904888C190.658 0.301629 191.839 0 193.162 0C194.485 0 195.655 0.301629 196.672 0.904888C197.71 1.48734 198.524 2.29862 199.115 3.33872C199.705 4.35802 200 5.51253 200 6.80225C200 8.11278 199.705 9.28809 199.115 10.3282C198.545 11.3683 197.741 12.19 196.703 12.7932C195.685 13.3965 194.505 13.6981 193.162 13.6981ZM193.131 12.3252C194.128 12.3252 195.024 12.086 195.818 11.6075C196.611 11.1291 197.242 10.4738 197.71 9.64172C198.178 8.80964 198.413 7.86315 198.413 6.80225C198.413 5.74135 198.178 4.80526 197.71 3.99398C197.242 3.1619 196.611 2.51704 195.818 2.0594C195.024 1.58095 194.128 1.34173 193.131 1.34173C192.154 1.34173 191.269 1.58095 190.475 2.0594C189.681 2.51704 189.051 3.1619 188.582 3.99398C188.135 4.80526 187.911 5.74135 187.911 6.80225C187.911 7.86315 188.135 8.80964 188.582 9.64172C189.051 10.4738 189.671 11.1291 190.445 11.6075C191.238 12.086 192.134 12.3252 193.131 12.3252Z"/>
+    <path fill="currentColor" d="M181.308 66H161.37L167.601 59.7736V13.6981L181.308 0V66Z"/>
+    <path fill="currentColor" d="M140.59 66C126.766 66 116.914 56.2341 116.914 42.3396C116.914 28.4451 126.766 18.6792 140.59 18.6792C154.494 18.6792 164.266 28.4451 164.266 42.3396C164.266 43.7688 164.187 45.1185 163.869 46.4683H130.659C131.692 51.6291 135.426 54.5668 140.59 54.5668C143.609 54.5668 146.39 53.4552 148.138 51.1527H162.677C158.864 60.2834 150.522 66 140.59 66ZM130.659 37.9728H150.522C149.409 32.8914 145.755 29.8743 140.59 29.8743C135.426 29.8743 131.771 32.8914 130.659 37.9728Z"/>
+    <path fill="currentColor" d="M96.9887 41.495L104.985 23.9729L100.934 19.9245H121.56L98.1892 66H95.7882L72.3378 19.9245H87.0648L96.9887 41.495Z"/>
+    <path fill="currentColor" d="M52.8888 66C39.0645 66 29.2126 56.2341 29.2126 42.3396C29.2126 28.4451 39.0645 18.6792 52.8888 18.6792C66.7925 18.6792 76.5649 28.4451 76.5649 42.3396C76.5649 43.7688 76.4855 45.1185 76.1676 46.4683H42.9575C43.9904 51.6291 47.7245 54.5668 52.8888 54.5668C55.9079 54.5668 58.6886 53.4552 60.4365 51.1527H74.9759C71.1623 60.2834 62.82 66 52.8888 66ZM42.9575 37.9728H62.82C61.7077 32.8914 58.053 29.8743 52.8888 29.8743C47.7245 29.8743 44.0698 32.8914 42.9575 37.9728Z"/>
+    <path fill="currentColor" d="M0 66H37.3828C37.3828 66 34.2686 64.4932 31.1527 60.4211C28.0368 56.3491 27.4134 53.5472 27.4134 53.5472H13.7062V13.6981L0 0V66Z"/>
+  </symbol>
+</svg>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="hero__eyebrow">Dossier de prensa · 2026</div>
+  <svg class="hero__logo" role="img" aria-label="Level"><use href="#level-logo"/></svg>
+  <p class="hero__title">Equilibrio diario,<br><em>en serio.</em></p>
+  <div class="hero__line"></div>
+  <div class="hero__meta">v1.0</div>
+</header>
+
+<div class="shell">
+
+  <!-- NAV -->
+  <nav class="nav" aria-label="Secciones del dossier">
+    <div class="nav__brand"><svg role="img" aria-label="Level"><use href="#level-logo"/></svg></div>
+    <ol>
+      <li><a href="#que-es" class="active"><span class="n">01</span> Qué es Level</a></li>
+      <li><a href="#propuesta"><span class="n">02</span> Propuesta de valor</a></li>
+      <li><a href="#datos"><span class="n">03</span> Datos clave</a></li>
+      <li><a href="#fundadores"><span class="n">04</span> Fundadores</a></li>
+      <li><a href="#formulacion"><span class="n">05</span> Formulación</a></li>
+      <li><a href="#estado"><span class="n">06</span> Estado y hoja de ruta</a></li>
+      <li><a href="#identidad"><span class="n">07</span> Identidad visual</a></li>
+      <li><a href="#faq"><span class="n">08</span> Preguntas frecuentes</a></li>
+      <li><a href="#contacto"><span class="n">09</span> Contacto</a></li>
+    </ol>
+  </nav>
+
+  <main class="main">
+
+    <!-- 01 QUÉ ES LEVEL -->
+    <section class="section" id="que-es">
+      <div class="eyebrow"><span class="tick"></span><span class="num">01</span> Qué es Level</div>
+      <h2 class="title">Una bebida funcional para el equilibrio diario.</h2>
+      <p class="lede">Level es una bebida funcional en polvo. No es un suplemento ni una bebida deportiva: es el gesto simple de sostener el equilibrio cada día.</p>
+      <p class="body">Combina probióticos y prebióticos, lion's mane, electrolitos, vitaminas y minerales — sin azúcar, endulzada de forma natural. Está pensada para acompañar a quienes ya cuidan su bienestar y buscan constancia, no intensidad.</p>
+
+      <h3 class="sub">Claims</h3>
+      <div class="claims">
+        <span class="claim">Keto friendly</span>
+        <span class="claim">Sin gluten</span>
+        <span class="claim">Sin azúcar</span>
+        <span class="claim">Non-GMO</span>
+        <span class="claim">Sin artificiales</span>
+        <span class="claim">Compañero de viaje</span>
+      </div>
+    </section>
+
+    <!-- 02 PROPUESTA DE VALOR -->
+    <section class="section" id="propuesta">
+      <div class="eyebrow"><span class="tick"></span><span class="num">02</span> Propuesta de valor</div>
+      <h2 class="title">Constancia, no intensidad.</h2>
+      <p class="body">Level nace de una idea simple: el bienestar se construye con constancia, no de golpe. En un mercado de picos de energía y promesas grandilocuentes, Level apuesta por una fórmula clara, con ingredientes que tienen una razón de ser, y un mensaje sin letra chica.</p>
+
+      <div class="attrs">
+        <div class="attr"><h4>Equilibrio</h4><p>El centro de todo. Constancia por encima del pico de energía.</p></div>
+        <div class="attr"><h4>Rigor</h4><p>Cada ingrediente tiene una razón. Se habla desde la evidencia.</p></div>
+        <div class="attr"><h4>Claridad</h4><p>Fórmula limpia, mensaje limpio. Nada de letra chica.</p></div>
+        <div class="attr"><h4>Vitalidad</h4><p>Bienestar que se siente liviano, no exigente.</p></div>
+      </div>
+    </section>
+
+    <!-- 03 DATOS CLAVE -->
+    <section class="section" id="datos">
+      <div class="eyebrow"><span class="tick"></span><span class="num">03</span> Datos clave</div>
+      <h2 class="title">La marca, en números.</h2>
+      <div class="datos">
+        <div class="dato"><h5>Fundación</h5><p>Abril 2025</p></div>
+        <div class="dato"><h5>Sede</h5><p>Rosario, Argentina</p></div>
+        <div class="dato"><h5>Rubro</h5><p>Bebida funcional en polvo</p></div>
+        <div class="dato"><h5>Canal</h5><p>DTC · tiendas de salud · Mercado Libre</p></div>
+      </div>
+    </section>
+
+    <!-- 04 FUNDADORES -->
+    <section class="section" id="fundadores">
+      <div class="eyebrow"><span class="tick"></span><span class="num">04</span> Fundadores</div>
+      <h2 class="title">Quiénes están detrás.</h2>
+      <p class="body">Level es una marca: la construyen sus ingredientes, su proceso y su equipo, no una historia personal. Estos son los datos de quienes la fundaron.</p>
+
+      <div class="founders">
+        <div class="founder">
+          <h4>Alan Beggs</h4>
+          <span class="role">Founder &amp; CEO</span>
+          <p class="bio placeholder">[trayectoria — completar]</p>
+        </div>
+        <div class="founder">
+          <h4>Manuel Pascual</h4>
+          <span class="role">Co-founder &amp; CPO</span>
+          <p class="bio placeholder">[trayectoria — completar]</p>
+        </div>
+        <div class="founder">
+          <h4>Ramiro Del Greco</h4>
+          <span class="role">Co-founder &amp; COO</span>
+          <p class="bio placeholder">[trayectoria — completar]</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 05 FORMULACIÓN -->
+    <section class="section" id="formulacion">
+      <div class="eyebrow"><span class="tick"></span><span class="num">05</span> Formulación</div>
+      <h2 class="title">Qué lleva Level.</h2>
+      <p class="body">Una fórmula con ingredientes funcionales, sin azúcar y sin artificiales. Cada componente tiene una función concreta dentro del producto.</p>
+
+      <div class="registros">
+        <div class="reg"><h5>Probióticos y prebióticos</h5><p>Acompañan la digestión, día a día.</p></div>
+        <div class="reg"><h5>Lion's mane</h5><p>Hongo funcional, presente en la fórmula.</p></div>
+        <div class="reg"><h5>Electrolitos</h5><p>Hidratación.</p></div>
+        <div class="reg"><h5>Vitaminas y minerales</h5><p>Complemento nutricional diario.</p></div>
+        <div class="reg"><h5>Edulcorante natural</h5><p>Sin azúcar agregada.</p></div>
+      </div>
+    </section>
+
+    <!-- 06 ESTADO Y HOJA DE RUTA -->
+    <section class="section" id="estado">
+      <div class="eyebrow"><span class="tick"></span><span class="num">06</span> Estado y hoja de ruta</div>
+      <h2 class="title">Dónde está Level hoy.</h2>
+      <p class="body">Level se encuentra en proceso de aprobación regulatoria ante ASSAL. Una vez obtenida, la marca avanza hacia producción y distribución en Rosario, con foco en comercio directo, tiendas de salud especializadas y Mercado Libre.</p>
+      <div class="pantone">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v4m0 4h.01"/></svg>
+        <p>Esta sección se actualiza a medida que avanza el proceso. No hay todavía una fecha de lanzamiento confirmada.</p>
+      </div>
+    </section>
+
+    <!-- 07 IDENTIDAD VISUAL -->
+    <section class="section" id="identidad">
+      <div class="eyebrow"><span class="tick"></span><span class="num">07</span> Identidad visual</div>
+      <h2 class="title">Logo, color y voz de marca.</h2>
+      <p class="body">El sistema visual completo de Level —logotipo, paleta, tipografía y guía de voz— vive en el manual de marca. Ahí están los assets descargables y las reglas de uso.</p>
+      <div class="downloads">
+        <a class="dl" href="https://pascualmj.github.io/level-brand-book/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M17 7H9M17 7V15"/></svg>
+          Ver manual de marca
+        </a>
+      </div>
+    </section>
+
+    <!-- 08 FAQ -->
+    <section class="section" id="faq">
+      <div class="eyebrow"><span class="tick"></span><span class="num">08</span> Preguntas frecuentes</div>
+      <h2 class="title">Para tener en cuenta.</h2>
+      <div class="faq">
+        <div class="faq-item">
+          <h4>¿Level trata o cura alguna condición?</h4>
+          <p>No. Level es una bebida funcional de bienestar, no un medicamento. No trata, cura ni previene enfermedades.</p>
+        </div>
+        <div class="faq-item">
+          <h4>¿Está aprobado por ASSAL?</h4>
+          <p>Level se encuentra actualmente en proceso de aprobación regulatoria ante ASSAL.</p>
+        </div>
+        <div class="faq-item">
+          <h4>¿Es un suplemento o una bebida deportiva?</h4>
+          <p>No. Level es de consumo diario, pensado para acompañar la rutina, no para el rendimiento deportivo puntual.</p>
+        </div>
+        <div class="faq-item">
+          <h4>¿Dónde se va a vender?</h4>
+          <p>El plan inicial contempla venta directa al consumidor, tiendas de salud especializadas y Mercado Libre, con foco en Rosario en esta primera etapa.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 09 CONTACTO -->
+    <section class="section" id="contacto">
+      <div class="eyebrow"><span class="tick"></span><span class="num">09</span> Contacto</div>
+      <h2 class="title">Contacto de prensa.</h2>
+      <div class="contact-card">
+        <span class="cname">Alan Beggs</span>
+        <span class="crole">Founder &amp; CEO</span>
+        <div class="contact-row">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16v16H4z" opacity="0"/><path d="M22 6l-10 7L2 6"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg>
+          <a href="mailto:contacto@levelwater.co">contacto@levelwater.co</a>
+        </div>
+        <div class="contact-row">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a13 13 0 010 18 13 13 0 010-18"/></svg>
+          <a href="https://levelwater.co" target="_blank" rel="noopener">levelwater.co</a>
+        </div>
+        <div class="contact-row">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="4"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
+          <a href="https://instagram.com/leveloficialok" target="_blank" rel="noopener">@leveloficialok</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<footer>
+  <svg class="flogo" role="img" aria-label="Level"><use href="#level-logo"/></svg>
+  <p>Este dossier es un documento vivo. A medida que avanza el proceso de aprobación y lanzamiento, sus secciones se actualizan.</p>
+  <div class="fmeta">Level® · Dossier de prensa · v1.0</div>
+</footer>
+
+<script>
+  const links = Array.from(document.querySelectorAll('.nav a'));
+  const map = {};
+  links.forEach(a=>{ map[a.getAttribute('href').slice(1)] = a; });
+  const obs = new IntersectionObserver(entries=>{
+    entries.forEach(en=>{
+      if(en.isIntersecting){
+        links.forEach(l=>l.classList.remove('active'));
+        const id = en.target.id;
+        if(map[id]) map[id].classList.add('active');
+      }
+    });
+  }, {rootMargin:'-45% 0px -50% 0px', threshold:0});
+  document.querySelectorAll('.section').forEach(s=>obs.observe(s));
+</script>
+</body>
+</html>
