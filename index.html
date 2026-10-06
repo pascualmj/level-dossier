@@ -582,6 +582,81 @@
       }
 
       /* ---------- RESPONSIVE ---------- */
+      /* ---------- PROPÓSITO ---------- */
+      .mv {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 16px;
+        margin: 34px 0 8px;
+      }
+      .mv__card {
+        background: #fff;
+        border: 1px solid var(--linea);
+        border-radius: 14px;
+        padding: 28px 26px 30px;
+      }
+      .mv__card--dark {
+        background: var(--marino);
+        border-color: var(--marino);
+      }
+      .mv__label {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-family: var(--mono);
+        font-size: 11px;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        color: var(--piedra);
+        margin-bottom: 16px;
+      }
+      .mv__label::before {
+        content: "";
+        width: 8px;
+        height: 8px;
+        background: var(--magenta);
+      }
+      .mv__card p {
+        font-family: var(--display);
+        font-weight: 500;
+        font-size: 1.15rem;
+        line-height: 1.4;
+        letter-spacing: -0.01em;
+        color: var(--marino);
+      }
+      .mv__card--dark .mv__label {
+        color: var(--celeste);
+      }
+      .mv__card--dark p {
+        color: #fff;
+      }
+      .values {
+        list-style: none;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+        gap: 14px;
+        margin: 0;
+        padding: 0;
+      }
+      .values li {
+        background: var(--bruma);
+        border: 1px solid var(--celeste);
+        border-radius: 12px;
+        padding: 18px 20px 20px;
+        font-family: var(--display);
+        font-weight: 500;
+        font-size: 1.05rem;
+        color: var(--marino);
+      }
+      .values li span {
+        display: block;
+        font-family: var(--mono);
+        font-size: 11px;
+        letter-spacing: 0.12em;
+        color: var(--magenta);
+        margin-bottom: 10px;
+      }
+
       @media (max-width: 900px) {
         .shell {
           flex-direction: column;
@@ -687,7 +762,7 @@
       </svg>
       <p class="hero__title">Equilibrio diario,<br /><em>en serio.</em></p>
       <div class="hero__line"></div>
-      <div class="hero__meta">v1.0</div>
+      <div class="hero__meta">v1.1</div>
     </header>
 
     <div class="shell">
@@ -703,32 +778,35 @@
             >
           </li>
           <li>
+            <a href="#proposito"><span class="n">02</span> Propósito</a>
+          </li>
+          <li>
             <a href="#propuesta"
-              ><span class="n">02</span> Propuesta de valor</a
+              ><span class="n">03</span> Propuesta de valor</a
             >
           </li>
           <li>
-            <a href="#datos"><span class="n">03</span> Datos clave</a>
+            <a href="#datos"><span class="n">04</span> Datos clave</a>
           </li>
           <li>
-            <a href="#fundadores"><span class="n">04</span> Fundadores</a>
+            <a href="#fundadores"><span class="n">05</span> Fundadores</a>
           </li>
           <li>
-            <a href="#formulacion"><span class="n">05</span> Formulación</a>
+            <a href="#formulacion"><span class="n">06</span> Formulación</a>
           </li>
           <li>
             <a href="#estado"
-              ><span class="n">06</span> Estado y hoja de ruta</a
+              ><span class="n">07</span> Estado y hoja de ruta</a
             >
           </li>
           <li>
-            <a href="#identidad"><span class="n">07</span> Identidad visual</a>
+            <a href="#identidad"><span class="n">08</span> Identidad visual</a>
           </li>
           <li>
-            <a href="#faq"><span class="n">08</span> Preguntas frecuentes</a>
+            <a href="#faq"><span class="n">09</span> Preguntas frecuentes</a>
           </li>
           <li>
-            <a href="#contacto"><span class="n">09</span> Contacto</a>
+            <a href="#contacto"><span class="n">10</span> Contacto</a>
           </li>
         </ol>
       </nav>
@@ -751,6 +829,17 @@
             pensada para acompañar a quienes ya cuidan su bienestar y buscan
             constancia, no intensidad.
           </p>
+          <p class="body">
+            Level nace con la intención de desarrollar una nueva generación de
+            productos para el bienestar cotidiano: funcionales, naturales,
+            simples y, sobre todo, disfrutables.
+          </p>
+          <p class="body">
+            Creemos que cuidarse no debería ser algo limitado al deporte,
+            asociado al sacrificio o reservado para determinados momentos. El
+            bienestar puede formar parte de todos los días y convivir con el
+            sabor, el disfrute y un estilo de vida moderno.
+          </p>
 
           <h3 class="sub">Claims</h3>
           <div class="claims">
@@ -763,10 +852,65 @@
           </div>
         </section>
 
-        <!-- 02 PROPUESTA DE VALOR -->
+        <!-- 02 PROPÓSITO -->
+        <section class="section" id="proposito">
+          <div class="eyebrow">
+            <span class="tick"></span><span class="num">02</span> Propósito
+          </div>
+          <h2 class="title">Misión, visión y valores.</h2>
+          <div class="mv">
+            <div class="mv__card">
+              <span class="mv__label">Misión</span>
+              <p>
+                Crear alimentos, bebidas y suplementos naturales funcionales,
+                pensados para la vida moderna, elaborados con criterio, buscando
+                excelencia y eficiencia.
+              </p>
+            </div>
+            <div class="mv__card mv__card--dark">
+              <span class="mv__label">Visión</span>
+              <p>
+                Ser la marca referente de una nueva generación de bienestar en
+                la que cuidarse forme parte de un estilo de vida deseado y
+                moderno.
+              </p>
+            </div>
+          </div>
+
+          <h3 class="sub">Valores</h3>
+          <ol class="values">
+            <li><span>01</span>Bienestar integral</li>
+            <li><span>02</span>Calidad con propósito</li>
+            <li><span>03</span>Naturalidad</li>
+            <li><span>04</span>Disfrute</li>
+            <li><span>05</span>Innovación</li>
+            <li><span>06</span>Simplicidad</li>
+            <li><span>07</span>Actitud</li>
+          </ol>
+
+          <h3 class="sub">Nuestra forma de entender el bienestar</h3>
+          <p class="body">
+            Para Level, el bienestar no pertenece exclusivamente al gimnasio, al
+            deporte o a un momento específico del día.
+          </p>
+          <p class="body">
+            Puede estar en una mañana de trabajo, una sesión de entrenamiento,
+            una tarde de estudio, un ensayo, un viaje o cualquier otro momento
+            de la rutina.
+          </p>
+          <p class="body">
+            Queremos crear productos que acompañen esos momentos combinando
+            <strong>funcionalidad, calidad, naturalidad, simplicidad y
+            disfrute</strong>, y construir una marca capaz de hacer que vivir
+            mejor también se sienta moderno y deseable.
+          </p>
+          <p class="body"><strong>Level. Subí de nivel.</strong></p>
+        </section>
+
+        <!-- 03 PROPUESTA DE VALOR -->
         <section class="section" id="propuesta">
           <div class="eyebrow">
-            <span class="tick"></span><span class="num">02</span> Propuesta de
+            <span class="tick"></span><span class="num">03</span> Propuesta de
             valor
           </div>
           <h2 class="title">Constancia, no intensidad.</h2>
@@ -802,10 +946,10 @@
           </div>
         </section>
 
-        <!-- 03 DATOS CLAVE -->
+        <!-- 04 DATOS CLAVE -->
         <section class="section" id="datos">
           <div class="eyebrow">
-            <span class="tick"></span><span class="num">03</span> Datos clave
+            <span class="tick"></span><span class="num">04</span> Datos clave
           </div>
           <h2 class="title">La marca.</h2>
           <div class="datos">
@@ -828,10 +972,10 @@
           </div>
         </section>
 
-        <!-- 04 FUNDADORES -->
+        <!-- 05 FUNDADORES -->
         <section class="section" id="fundadores">
           <div class="eyebrow">
-            <span class="tick"></span><span class="num">04</span> Fundadores
+            <span class="tick"></span><span class="num">05</span> Fundadores
           </div>
           <h2 class="title">Detrás del equilibrio de Level.</h2>
           <p class="body">
@@ -884,10 +1028,10 @@
           </div>
         </section>
 
-        <!-- 05 FORMULACIÓN -->
+        <!-- 06 FORMULACIÓN -->
         <section class="section" id="formulacion">
           <div class="eyebrow">
-            <span class="tick"></span><span class="num">05</span> Formulación
+            <span class="tick"></span><span class="num">06</span> Formulación
           </div>
           <h2 class="title">Qué lleva Level.</h2>
           <p class="body">
@@ -932,10 +1076,10 @@
           </div>
         </section>
 
-        <!-- 06 ESTADO Y HOJA DE RUTA -->
+        <!-- 07 ESTADO Y HOJA DE RUTA -->
         <section class="section" id="estado">
           <div class="eyebrow">
-            <span class="tick"></span><span class="num">06</span> Estado y hoja
+            <span class="tick"></span><span class="num">07</span> Estado y hoja
             de ruta
           </div>
           <h2 class="title">Dónde está Level hoy.</h2>
@@ -965,10 +1109,10 @@
           </div>
         </section>
 
-        <!-- 07 IDENTIDAD VISUAL -->
+        <!-- 08 IDENTIDAD VISUAL -->
         <section class="section" id="identidad">
           <div class="eyebrow">
-            <span class="tick"></span><span class="num">07</span> Identidad
+            <span class="tick"></span><span class="num">08</span> Identidad
             visual
           </div>
           <h2 class="title">Logo, color y voz de marca.</h2>
@@ -1000,10 +1144,10 @@
           </div>
         </section>
 
-        <!-- 08 FAQ -->
+        <!-- 09 FAQ -->
         <section class="section" id="faq">
           <div class="eyebrow">
-            <span class="tick"></span><span class="num">08</span> Preguntas
+            <span class="tick"></span><span class="num">09</span> Preguntas
             frecuentes
           </div>
           <h2 class="title">Para tener en cuenta.</h2>
@@ -1042,10 +1186,10 @@
           </div>
         </section>
 
-        <!-- 09 CONTACTO -->
+        <!-- 10 CONTACTO -->
         <section class="section" id="contacto">
           <div class="eyebrow">
-            <span class="tick"></span><span class="num">09</span> Contacto
+            <span class="tick"></span><span class="num">10</span> Contacto
           </div>
           <h2 class="title">Contacto de prensa.</h2>
           <div class="contact-card">
@@ -1118,7 +1262,7 @@
         Este dossier es un documento vivo. A medida que avanza el proceso de
         aprobación y lanzamiento, sus secciones se actualizan.
       </p>
-      <div class="fmeta">Level® · Dossier de prensa · v1.0</div>
+      <div class="fmeta">Level® · Dossier de prensa · v1.1</div>
     </footer>
 
     <script>
