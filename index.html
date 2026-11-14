@@ -6,17 +6,18 @@
     <title>Level — Dossier de prensa</title>
     <meta
       name="description"
-      content="Dossier de prensa de Level: bebida funcional en polvo. Rosario, Argentina."
+      content="Dossier de prensa de Level: marca de bienestar funcional. Rosario, Argentina."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Inter:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500&family=Inter:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
     <style>
       :root {
         --marino: #073b7c;
+        --logo: #1d427a;
         --azul: #1763d6;
         --celeste: #6fa8ec;
         --bruma: #e9f2fc;
@@ -27,7 +28,6 @@
         --linea: rgba(13, 22, 38, 0.1);
         --display: "Space Grotesk", sans-serif;
         --body: "Inter", sans-serif;
-        --mono: "Space Mono", monospace;
       }
       * {
         box-sizing: border-box;
@@ -73,7 +73,9 @@
         overflow: hidden;
       }
       .hero__eyebrow {
-        font-family: var(--mono);
+        font-family: var(--body);
+        font-variant-numeric: tabular-nums;
+        font-weight: 500;
         font-size: 13px;
         letter-spacing: 0.18em;
         text-transform: uppercase;
@@ -93,7 +95,7 @@
       .hero__logo {
         width: min(46vw, 420px);
         height: auto;
-        color: var(--marino);
+        color: var(--logo);
         display: block;
       }
       .hero__title {
@@ -111,11 +113,14 @@
         font-style: normal;
       }
       .hero__sub {
-        font-family: var(--mono);
-        font-size: 14px;
-        letter-spacing: 0.06em;
-        color: rgba(7, 59, 124, 0.7);
-        margin-top: 18px;
+        font-family: var(--body);
+        font-variant-numeric: tabular-nums;
+        font-weight: 500;
+        font-size: clamp(1rem, 1.6vw, 1.2rem);
+        line-height: 1.5;
+        color: rgba(7, 59, 124, 0.75);
+        max-width: 36ch;
+        margin-top: 20px;
       }
       .hero__line {
         position: absolute;
@@ -139,7 +144,8 @@
         right: 8vw;
         bottom: 6vh;
         transform: translateY(50%);
-        font-family: var(--mono);
+        font-family: var(--body);
+        font-variant-numeric: tabular-nums;
         font-size: 12px;
         letter-spacing: 0.14em;
         color: rgba(7, 59, 124, 0.6);
@@ -167,7 +173,9 @@
         display: flex;
         align-items: center;
         gap: 10px;
-        font-family: var(--mono);
+        font-family: var(--body);
+        font-variant-numeric: tabular-nums;
+        font-weight: 500;
         font-size: 12px;
         letter-spacing: 0.12em;
         color: var(--piedra);
@@ -177,7 +185,7 @@
       .nav__brand svg {
         width: 64px;
         height: auto;
-        color: var(--marino);
+        color: var(--logo);
       }
       .nav ol {
         list-style: none;
@@ -199,7 +207,9 @@
           background 0.2s;
       }
       .nav a .n {
-        font-family: var(--mono);
+        font-family: var(--body);
+        font-variant-numeric: tabular-nums;
+        font-weight: 500;
         font-size: 12px;
         color: var(--celeste);
       }
@@ -233,7 +243,9 @@
         display: flex;
         align-items: center;
         gap: 12px;
-        font-family: var(--mono);
+        font-family: var(--body);
+        font-variant-numeric: tabular-nums;
+        font-weight: 500;
         font-size: 12px;
         letter-spacing: 0.16em;
         text-transform: uppercase;
@@ -310,7 +322,9 @@
         margin-top: 30px;
       }
       .claim {
-        font-family: var(--mono);
+        font-family: var(--body);
+        font-variant-numeric: tabular-nums;
+        font-weight: 500;
         font-size: 12px;
         letter-spacing: 0.06em;
         color: var(--marino);
@@ -318,27 +332,6 @@
         border: 1px solid var(--celeste);
         border-radius: 40px;
         padding: 8px 16px;
-      }
-      .pantone {
-        display: flex;
-        gap: 12px;
-        align-items: flex-start;
-        background: var(--bruma);
-        border-radius: 12px;
-        padding: 18px 20px;
-        margin-top: 26px;
-      }
-      .pantone svg {
-        flex: 0 0 auto;
-        width: 18px;
-        height: 18px;
-        color: var(--azul);
-        margin-top: 3px;
-      }
-      .pantone p {
-        font-size: 0.95rem;
-        color: #26303f;
-        margin: 0;
       }
 
       /* ---------- DATOS CLAVE ---------- */
@@ -355,13 +348,14 @@
         padding: 18px 20px;
       }
       .dato h5 {
-        font-family: var(--mono);
+        font-family: var(--body);
+        font-variant-numeric: tabular-nums;
         font-size: 11px;
         letter-spacing: 0.1em;
         text-transform: uppercase;
         color: var(--azul);
         margin-bottom: 8px;
-        font-weight: 400;
+        font-weight: 500;
       }
       .dato p {
         font-family: var(--display);
@@ -391,7 +385,9 @@
         margin-bottom: 4px;
       }
       .founder .role {
-        font-family: var(--mono);
+        font-family: var(--body);
+        font-variant-numeric: tabular-nums;
+        font-weight: 500;
         font-size: 11px;
         letter-spacing: 0.08em;
         text-transform: uppercase;
@@ -465,13 +461,14 @@
         padding: 16px 18px;
       }
       .reg h5 {
-        font-family: var(--mono);
+        font-family: var(--body);
+        font-variant-numeric: tabular-nums;
         font-size: 11px;
         letter-spacing: 0.1em;
         text-transform: uppercase;
         color: var(--azul);
         margin-bottom: 7px;
-        font-weight: 400;
+        font-weight: 500;
       }
       .reg p {
         font-size: 0.92rem;
@@ -522,7 +519,9 @@
         margin-bottom: 2px;
       }
       .contact-card .crole {
-        font-family: var(--mono);
+        font-family: var(--body);
+        font-variant-numeric: tabular-nums;
+        font-weight: 500;
         font-size: 11px;
         letter-spacing: 0.08em;
         text-transform: uppercase;
@@ -564,7 +563,7 @@
       }
       footer .flogo {
         width: 150px;
-        color: var(--marino);
+        color: var(--logo);
         margin-bottom: 24px;
       }
       footer p {
@@ -573,7 +572,9 @@
         max-width: 46ch;
       }
       footer .fmeta {
-        font-family: var(--mono);
+        font-family: var(--body);
+        font-variant-numeric: tabular-nums;
+        font-weight: 500;
         font-size: 12px;
         letter-spacing: 0.12em;
         color: var(--marino);
@@ -603,7 +604,9 @@
         display: flex;
         align-items: center;
         gap: 10px;
-        font-family: var(--mono);
+        font-family: var(--body);
+        font-variant-numeric: tabular-nums;
+        font-weight: 500;
         font-size: 11px;
         letter-spacing: 0.16em;
         text-transform: uppercase;
@@ -650,7 +653,9 @@
       }
       .values li span {
         display: block;
-        font-family: var(--mono);
+        font-family: var(--body);
+        font-variant-numeric: tabular-nums;
+        font-weight: 500;
         font-size: 11px;
         letter-spacing: 0.12em;
         color: var(--magenta);
@@ -726,50 +731,46 @@
   </head>
   <body>
     <svg width="0" height="0" style="position: absolute" aria-hidden="true">
-      <symbol id="level-logo" viewBox="0 0 200 66">
+      <symbol id="level-logo" viewBox="0 0 1198 420">
+        <g transform="matrix(4.166667 0 0 4.166667 -1243.216667 -501.762917)">
         <path
           fill="currentColor"
-          d="M191.727 7.86315V6.49022H193.497C193.803 6.49022 194.047 6.39661 194.23 6.2094C194.434 6.02218 194.535 5.79336 194.535 5.52293C194.535 5.2525 194.444 5.03408 194.261 4.86767C194.077 4.70125 193.833 4.61804 193.528 4.61804H191.727V3.21391H193.497C194.332 3.21391 194.983 3.42193 195.451 3.83797C195.94 4.25401 196.184 4.81566 196.184 5.52293C196.184 6.2094 195.919 6.77105 195.39 7.20789C194.861 7.64473 194.2 7.86315 193.406 7.86315H191.727ZM190.658 10.297V3.21391H192.246V10.297H190.658ZM194.566 10.297C194.505 9.98496 194.403 9.65213 194.261 9.29849C194.139 8.94486 193.925 8.60162 193.62 8.26879C193.335 7.93596 192.887 7.64473 192.276 7.39511L193.833 6.92707C194.525 7.3431 195.054 7.83195 195.421 8.39361C195.807 8.95526 196.072 9.58972 196.214 10.297H194.566ZM193.162 13.6981C191.839 13.6981 190.658 13.3965 189.62 12.7932C188.582 12.19 187.768 11.3683 187.178 10.3282C186.588 9.28809 186.293 8.11278 186.293 6.80225C186.293 5.53333 186.588 4.38922 187.178 3.36992C187.768 2.32982 188.582 1.50815 189.62 0.904888C190.658 0.301629 191.839 0 193.162 0C194.485 0 195.655 0.301629 196.672 0.904888C197.71 1.48734 198.524 2.29862 199.115 3.33872C199.705 4.35802 200 5.51253 200 6.80225C200 8.11278 199.705 9.28809 199.115 10.3282C198.545 11.3683 197.741 12.19 196.703 12.7932C195.685 13.3965 194.505 13.6981 193.162 13.6981ZM193.131 12.3252C194.128 12.3252 195.024 12.086 195.818 11.6075C196.611 11.1291 197.242 10.4738 197.71 9.64172C198.178 8.80964 198.413 7.86315 198.413 6.80225C198.413 5.74135 198.178 4.80526 197.71 3.99398C197.242 3.1619 196.611 2.51704 195.818 2.0594C195.024 1.58095 194.128 1.34173 193.131 1.34173C192.154 1.34173 191.269 1.58095 190.475 2.0594C189.681 2.51704 189.051 3.1619 188.582 3.99398C188.135 4.80526 187.911 5.74135 187.911 6.80225C187.911 7.86315 188.135 8.80964 188.582 9.64172C189.051 10.4738 189.671 11.1291 190.445 11.6075C191.238 12.086 192.134 12.3252 193.131 12.3252Z"
+          transform="translate(487.822 165.9871)"
+          d="M0,9.461C2.008,1.771 8.021,-3.734 15.847,-4.984C17.151,-5.192 18.437,-5.297 19.669,-5.297C26.512,-5.297 31.963,-2.052 35.089,3.859L0,9.461ZM55.917,9.629C52.837,-9.699 38.26,-22.686 19.645,-22.686C17.497,-22.686 15.298,-22.508 13.11,-22.159C-7.756,-18.828 -21.396,0.754 -17.943,22.422C-14.835,41.923 0.045,55.025 19.085,55.025C21.317,55.025 23.602,54.841 25.878,54.477C40.725,52.107 51.472,43.073 56.14,29.037L56.832,26.934L35.312,30.401L35.195,30.539C32.195,34.09 28.02,36.38 23.119,37.162C21.812,37.371 20.508,37.477 19.246,37.477C11.332,37.477 4.952,33.443 1.648,26.382L57.175,17.517L55.917,9.629ZM-32.901,-20.334L-49.892,28.02L-67.142,-20.334L-85.583,-20.334L-61.124,45.441C-59.399,50.081 -54.917,53.198 -49.97,53.198C-44.996,53.198 -40.505,50.057 -38.794,45.384L-14.739,-20.334L-32.901,-20.334ZM91.732,36.538C80.368,36.538 78.852,33.827 78.852,23.054L78.852,-45.564L62.118,-42.811L62.118,23.054C62.118,45.599 69.293,53.59 89.538,53.59L93.108,53.59L93.108,36.538L91.732,36.538ZM-172.715,23.054L-172.715,-45.564L-189.45,-42.811L-189.45,23.054C-189.45,45.599 -182.274,53.59 -162.029,53.59L-158.459,53.59L-158.459,36.538L-159.835,36.538C-171.199,36.538 -172.715,33.827 -172.715,23.054M-139.084,9.461C-137.076,1.771 -131.063,-3.734 -123.237,-4.984C-121.933,-5.192 -120.647,-5.297 -119.415,-5.297C-112.572,-5.297 -107.121,-2.052 -103.995,3.859L-139.084,9.461ZM-83.167,9.629C-86.247,-9.699 -100.824,-22.686 -119.439,-22.686C-121.587,-22.686 -123.786,-22.508 -125.974,-22.159C-136.067,-20.548 -144.821,-15.071 -150.624,-6.736C-156.422,1.592 -158.696,11.947 -157.027,22.422C-153.919,41.923 -139.039,55.025 -119.999,55.025C-117.767,55.025 -115.481,54.841 -113.206,54.477C-98.359,52.107 -87.613,43.073 -82.944,29.037L-82.252,26.934L-103.771,30.401L-103.889,30.539C-106.889,34.09 -111.065,36.38 -115.965,37.162C-117.273,37.371 -118.576,37.477 -119.838,37.477C-127.753,37.477 -134.132,33.443 -137.436,26.382L-81.909,17.517L-83.167,9.629Z"
         />
         <path
           fill="currentColor"
-          d="M181.308 66H161.37L167.601 59.7736V13.6981L181.308 0V66Z"
+          transform="translate(577.5244 130.3524)"
+          d="M0,-5.578L0,-2.873L2.083,-2.873C2.455,-2.873 2.77,-3.008 3.029,-3.268C3.288,-3.538 3.423,-3.854 3.423,-4.226C3.423,-4.598 3.288,-4.913 3.029,-5.172C2.77,-5.443 2.455,-5.578 2.083,-5.578L0,-5.578ZM-1.599,-6.434C-1.599,-6.806 -1.239,-7.111 -0.799,-7.111L2.117,-7.111C2.939,-7.111 3.648,-6.829 4.222,-6.277C4.797,-5.724 5.09,-5.048 5.09,-4.226C5.09,-3.042 4.414,-2.062 3.378,-1.611L4.369,0.361C4.56,0.722 4.38,1.139 3.964,1.353C3.569,1.533 3.096,1.41 2.95,1.083L1.734,-1.34L0,-1.34L0,0.756C0,1.128 -0.36,1.432 -0.799,1.432C-1.239,1.432 -1.599,1.128 -1.599,0.756L-1.599,-6.434Z"
         />
         <path
           fill="currentColor"
-          d="M140.59 66C126.766 66 116.914 56.2341 116.914 42.3396C116.914 28.4451 126.766 18.6792 140.59 18.6792C154.494 18.6792 164.266 28.4451 164.266 42.3396C164.266 43.7688 164.187 45.1185 163.869 46.4683H130.659C131.692 51.6291 135.426 54.5668 140.59 54.5668C143.609 54.5668 146.39 53.4552 148.138 51.1527H162.677C158.864 60.2834 150.522 66 140.59 66ZM130.659 37.9728H150.522C149.409 32.8914 145.755 29.8743 140.59 29.8743C135.426 29.8743 131.771 32.8914 130.659 37.9728Z"
+          transform="translate(578.8278 133.3065)"
+          d="M0,-11.567C-3.186,-11.567 -5.778,-8.973 -5.778,-5.784C-5.778,-2.595 -3.186,0 0,0C3.186,0 5.778,-2.595 5.778,-5.784C5.778,-8.973 3.186,-11.567 0,-11.567M0,1.27C-3.886,1.27 -7.047,-1.894 -7.047,-5.784C-7.047,-9.673 -3.886,-12.837 0,-12.837C3.886,-12.837 7.047,-9.673 7.047,-5.784C7.047,-1.894 3.886,1.27 0,1.27"
         />
-        <path
-          fill="currentColor"
-          d="M96.9887 41.495L104.985 23.9729L100.934 19.9245H121.56L98.1892 66H95.7882L72.3378 19.9245H87.0648L96.9887 41.495Z"
-        />
-        <path
-          fill="currentColor"
-          d="M52.8888 66C39.0645 66 29.2126 56.2341 29.2126 42.3396C29.2126 28.4451 39.0645 18.6792 52.8888 18.6792C66.7925 18.6792 76.5649 28.4451 76.5649 42.3396C76.5649 43.7688 76.4855 45.1185 76.1676 46.4683H42.9575C43.9904 51.6291 47.7245 54.5668 52.8888 54.5668C55.9079 54.5668 58.6886 53.4552 60.4365 51.1527H74.9759C71.1623 60.2834 62.82 66 52.8888 66ZM42.9575 37.9728H62.82C61.7077 32.8914 58.053 29.8743 52.8888 29.8743C47.7245 29.8743 44.0698 32.8914 42.9575 37.9728Z"
-        />
-        <path
-          fill="currentColor"
-          d="M0 66H37.3828C37.3828 66 34.2686 64.4932 31.1527 60.4211C28.0368 56.3491 27.4134 53.5472 27.4134 53.5472H13.7062V13.6981L0 0V66Z"
-        />
+        </g>
       </symbol>
     </svg>
 
     <!-- HERO -->
     <header class="hero">
       <div class="hero__eyebrow">Dossier de prensa · 2026</div>
-      <svg class="hero__logo" role="img" aria-label="Level">
+      <svg viewBox="0 0 1198 420" class="hero__logo" role="img" aria-label="Level">
         <use href="#level-logo" />
       </svg>
-      <p class="hero__title">Equilibrio diario,<br /><em>en serio.</em></p>
+      <p class="hero__title">Subí de <em>nivel.</em></p>
+      <p class="hero__sub">
+        Una nueva generación de bienestar funcional para la vida cotidiana.
+      </p>
       <div class="hero__line"></div>
-      <div class="hero__meta">v1.1</div>
+      <div class="hero__meta">v2.0</div>
     </header>
 
     <div class="shell">
       <!-- NAV -->
       <nav class="nav" aria-label="Secciones del dossier">
         <div class="nav__brand">
-          <svg role="img" aria-label="Level"><use href="#level-logo" /></svg>
+          <svg viewBox="0 0 1198 420" role="img" aria-label="Level"><use href="#level-logo" /></svg>
         </div>
         <ol>
           <li>
@@ -795,18 +796,13 @@
             <a href="#formulacion"><span class="n">06</span> Formulación</a>
           </li>
           <li>
-            <a href="#estado"
-              ><span class="n">07</span> Estado y hoja de ruta</a
-            >
+            <a href="#identidad"><span class="n">07</span> Identidad visual</a>
           </li>
           <li>
-            <a href="#identidad"><span class="n">08</span> Identidad visual</a>
+            <a href="#faq"><span class="n">08</span> Preguntas frecuentes</a>
           </li>
           <li>
-            <a href="#faq"><span class="n">09</span> Preguntas frecuentes</a>
-          </li>
-          <li>
-            <a href="#contacto"><span class="n">10</span> Contacto</a>
+            <a href="#contacto"><span class="n">09</span> Contacto</a>
           </li>
         </ol>
       </nav>
@@ -817,17 +813,18 @@
           <div class="eyebrow">
             <span class="tick"></span><span class="num">01</span> Qué es Level
           </div>
-          <h2 class="title">Una bebida funcional para el equilibrio diario.</h2>
+          <h2 class="title">Una marca de bienestar funcional.</h2>
           <p class="lede">
-            Level es una bebida funcional en polvo. No es un suplemento ni una
-            bebida deportiva: es el gesto simple de sostener el equilibrio cada
-            día.
+            Level es una marca de bienestar funcional para la vida cotidiana. Su
+            primer producto es un suplemento dietario en polvo sabor limón, con
+            probióticos, melena de león, vitaminas y minerales, que se prepara
+            con un stick en 500 ml de agua.
           </p>
           <p class="body">
+            Level es una marca paraguas: firma una familia de productos
+            funcionales, naturales y simples. El primer producto no la agota.
             Combina probióticos y prebióticos, melena de león, electrolitos,
-            vitaminas y minerales — sin azúcar, endulzada de forma natural. Está
-            pensada para acompañar a quienes ya cuidan su bienestar y buscan
-            constancia, no intensidad.
+            vitaminas y minerales, sin azúcar y endulzado de forma natural.
           </p>
           <p class="body">
             Level nace con la intención de desarrollar una nueva generación de
@@ -841,14 +838,18 @@
             sabor, el disfrute y un estilo de vida moderno.
           </p>
 
-          <h3 class="sub">Claims</h3>
+          <h3 class="sub">El producto</h3>
           <div class="claims">
-            <span class="claim">Keto friendly</span>
-            <span class="claim">Sin gluten</span>
+            <span class="claim">Suplemento dietario en polvo</span>
+            <span class="claim">Sabor limón</span>
+            <span class="claim">Para adultos</span>
+            <span class="claim">Libre de gluten (sin TACC)</span>
             <span class="claim">Sin azúcar</span>
+            <span class="claim">Keto friendly</span>
             <span class="claim">Non-GMO</span>
-            <span class="claim">Sin artificiales</span>
-            <span class="claim">Compañero de viaje</span>
+            <span class="claim">Dairy free</span>
+            <span class="claim">8,49 g</span>
+            <span class="claim">1 stick en 500 ml</span>
           </div>
         </section>
 
@@ -913,36 +914,22 @@
             <span class="tick"></span><span class="num">03</span> Propuesta de
             valor
           </div>
-          <h2 class="title">Constancia, no intensidad.</h2>
+          <h2 class="title">Bienestar para la vida real.</h2>
           <p class="body">
-            Level nace de una idea simple: el bienestar se construye con
-            constancia, no de golpe. En un mercado de picos de energía y
-            promesas grandilocuentes, Level apuesta por una fórmula clara, con
-            ingredientes que tienen una razón de ser, y un mensaje sin letra
-            chica.
+            Level convierte la suplementación para la vida cotidiana en una
+            experiencia simple, rica, portable y deseable. Cuidarte puede ser
+            moderno, disfrutable y deseable.
           </p>
 
+          <h3 class="sub">Personalidad · somos / no somos</h3>
           <div class="attrs">
-            <div class="attr">
-              <h4>Equilibrio</h4>
-              <p>
-                El centro de todo. Constancia por encima del pico de energía.
-              </p>
-            </div>
-            <div class="attr">
-              <h4>Rigor</h4>
-              <p>
-                Cada ingrediente tiene una razón. Se habla desde la evidencia.
-              </p>
-            </div>
-            <div class="attr">
-              <h4>Claridad</h4>
-              <p>Fórmula limpia, mensaje limpio. Nada de letra chica.</p>
-            </div>
-            <div class="attr">
-              <h4>Vitalidad</h4>
-              <p>Bienestar que se siente liviano, no exigente.</p>
-            </div>
+            <div class="attr"><h4>Seguros</h4><p>No arrogantes.</p></div>
+            <div class="attr"><h4>Energéticos</h4><p>No fitness extremos.</p></div>
+            <div class="attr"><h4>Inteligentes</h4><p>No académicos.</p></div>
+            <div class="attr"><h4>Modernos</h4><p>No forzados.</p></div>
+            <div class="attr"><h4>Disfrutables</h4><p>No medicinales.</p></div>
+            <div class="attr"><h4>Premium</h4><p>No pretenciosos.</p></div>
+            <div class="attr"><h4>Cercanos</h4><p>No infantiles.</p></div>
           </div>
         </section>
 
@@ -963,7 +950,7 @@
             </div>
             <div class="dato">
               <h5>Rubro</h5>
-              <p>Bebida funcional en polvo</p>
+              <p>Suplemento dietario en polvo</p>
             </div>
             <div class="dato">
               <h5>Canal</h5>
@@ -977,17 +964,17 @@
           <div class="eyebrow">
             <span class="tick"></span><span class="num">05</span> Fundadores
           </div>
-          <h2 class="title">Detrás del equilibrio de Level.</h2>
+          <h2 class="title">Detrás de Level.</h2>
           <p class="body">
             Somos tres mentes, tres estilos de vida diferentes, pero con un
             propósito idéntico: redefinir lo que significa cuidarse.<br /><br />
             El proyecto no nació en una oficina, sino de nuestras propias
             búsquedas personales. Entre el ritmo acelerado del día a día, las
             responsabilidades y las ganas de marcar un cambio significativo, nos
-            dimos cuenta de que faltaba algo: una bebida que no solo fuera
+            dimos cuenta de que faltaba algo: un producto que no solo fuera
             "saludable" en la etiqueta, sino que se sintiera como un verdadero
-            refresh en la rutina. Un partner real para potenciar el equilibrio
-            diario.
+            refresh en la rutina. Un partner real para subir de nivel todos los
+            días.
           </p>
 
           <div class="founders">
@@ -1035,90 +1022,44 @@
           </div>
           <h2 class="title">Qué lleva Level.</h2>
           <p class="body">
-            Una fórmula con ingredientes naturales funcionales, cero azúcar y
-            edulcorantes. Cada componente tiene una función concreta dentro del
-            producto.
+            Una fórmula con ingredientes naturales funcionales, sin azúcar y
+            sin edulcorantes. Se prepara con un stick en 500 ml de agua.
           </p>
 
           <div class="registros">
             <div class="reg">
               <h5>Perfil de sabor</h5>
               <p>
-                Cero azucar y edulcorantes. El dulzor proviene de materia prima
+                Cero azúcar y edulcorantes. El dulzor proviene de materia prima
                 diseñada y fabricada en Argentina como alternativa natural de
                 origen vegetal. Así mismo, los sabores de Level también son
                 naturales sin ingredientes artificiales.
               </p>
             </div>
             <div class="reg">
-              <h5>Electrolitos</h5>
+              <h5>Ingredientes</h5>
               <p>
-                Tomar litros de agua no sirve si tus células no la absorben. Los
-                electrolitos son la "llave" que abre tus células para que el
-                agua entre, dándote energía real.
+                Probióticos y prebióticos, melena de león, electrolitos,
+                vitaminas y minerales.
               </p>
             </div>
             <div class="reg">
-              <h5>Probióticos y prebióticos</h5>
-              <p>
-                En conjunto, son esenciales para el óptimo bienestar del segundo
-                cerebro del cuerpo humano y el sistema inmunológico.
-              </p>
-            </div>
-            <div class="reg">
-              <h5>Vitaminas y minerales</h5>
-              <p>Micronutrientes esenciales para brillar y rendir al 100%.</p>
-            </div>
-            <div class="reg">
-              <h5>Melena de león</h5>
-              <p>Un cerebro encendido en un cuerpo hidratado.</p>
+              <h5>Preparación</h5>
+              <p>1 stick de 8,49 g en 500 ml de agua. Sabor limón.</p>
             </div>
           </div>
         </section>
 
-        <!-- 07 ESTADO Y HOJA DE RUTA -->
-        <section class="section" id="estado">
-          <div class="eyebrow">
-            <span class="tick"></span><span class="num">07</span> Estado y hoja
-            de ruta
-          </div>
-          <h2 class="title">Dónde está Level hoy.</h2>
-          <p class="body">
-            Level se encuentra en proceso de aprobación regulatoria ante ASSAL.
-            Una vez obtenida, la marca avanza hacia producción y distribución en
-            Rosario, con foco en comercio directo, tiendas saludables y afines y
-            Mercado Libre.
-          </p>
-          <div class="pantone">
-            <svg
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              aria-hidden="true"
-            >
-              <circle cx="12" cy="12" r="9" />
-              <path d="M12 8v4m0 4h.01" />
-            </svg>
-            <p>
-              Esta sección se actualiza a medida que avanza el proceso. No hay
-              todavía una fecha de lanzamiento confirmada.
-            </p>
-          </div>
-        </section>
-
-        <!-- 08 IDENTIDAD VISUAL -->
+        <!-- 07 IDENTIDAD VISUAL -->
         <section class="section" id="identidad">
           <div class="eyebrow">
-            <span class="tick"></span><span class="num">08</span> Identidad
+            <span class="tick"></span><span class="num">07</span> Identidad
             visual
           </div>
-          <h2 class="title">Logo, color y voz de marca.</h2>
+          <h2 class="title">Logo, color y tipografía.</h2>
           <p class="body">
-            El sistema visual completo de Level —logotipo, paleta, tipografía y
-            guía de voz— vive en el manual de marca. Ahí están los assets
+            El sistema visual completo de Level —logotipo, paleta y
+            tipografía— vive en el manual de marca. Ahí están los assets
             descargables y las reglas de uso.
           </p>
           <div class="downloads">
@@ -1144,10 +1085,10 @@
           </div>
         </section>
 
-        <!-- 09 FAQ -->
+        <!-- 08 FAQ -->
         <section class="section" id="faq">
           <div class="eyebrow">
-            <span class="tick"></span><span class="num">09</span> Preguntas
+            <span class="tick"></span><span class="num">08</span> Preguntas
             frecuentes
           </div>
           <h2 class="title">Para tener en cuenta.</h2>
@@ -1155,41 +1096,32 @@
             <div class="faq-item">
               <h4>¿Level trata o cura alguna condición?</h4>
               <p>
-                No. Level es una bebida funcional que potencia el bienestar
-                diario, tratándose así de un género nuevo no relacionado con
-                medicamentos.
+                No. Level es un suplemento dietario. No trata, cura ni previene
+                enfermedades, ni reemplaza medicación.
               </p>
             </div>
             <div class="faq-item">
-              <h4>¿Está aprobado por ASSAL?</h4>
+              <h4>¿Qué tipo de producto es?</h4>
               <p>
-                Level se encuentra actualmente en proceso de aprobación
-                regulatoria ante ASSAL.
+                Level es una marca de bienestar funcional. Su primer producto
+                es un suplemento dietario en polvo sabor limón, pensado para la
+                vida cotidiana: un stick en 500 ml de agua.
               </p>
             </div>
             <div class="faq-item">
-              <h4>¿Es un suplemento o una bebida deportiva?</h4>
+              <h4>¿Dónde se vende?</h4>
               <p>
-                Level es una bebida de consumo diario pensada como tu mejor
-                aliado que por sus funciones es polivalente y potencia tu
-                enfoque, hidratación y vitalidad.
-              </p>
-            </div>
-            <div class="faq-item">
-              <h4>¿Dónde se va a vender?</h4>
-              <p>
-                El plan inicial contempla venta directa al consumidor, tiendas
-                saludables y afines y Mercado Libre, con foco en Rosario en esta
-                primera etapa.
+                Level se vende directo al consumidor, en tiendas saludables y
+                afines y en Mercado Libre, con foco en Rosario.
               </p>
             </div>
           </div>
         </section>
 
-        <!-- 10 CONTACTO -->
+        <!-- 09 CONTACTO -->
         <section class="section" id="contacto">
           <div class="eyebrow">
-            <span class="tick"></span><span class="num">10</span> Contacto
+            <span class="tick"></span><span class="num">09</span> Contacto
           </div>
           <h2 class="title">Contacto de prensa.</h2>
           <div class="contact-card">
@@ -1255,14 +1187,14 @@
     </div>
 
     <footer>
-      <svg class="flogo" role="img" aria-label="Level">
+      <svg viewBox="0 0 1198 420" class="flogo" role="img" aria-label="Level">
         <use href="#level-logo" />
       </svg>
       <p>
-        Este dossier es un documento vivo. A medida que avanza el proceso de
-        aprobación y lanzamiento, sus secciones se actualizan.
+        Este dossier es un documento vivo. A medida que Level avanza, sus
+        secciones se actualizan.
       </p>
-      <div class="fmeta">Level® · Dossier de prensa · v1.1</div>
+      <div class="fmeta">Level® · Dossier de prensa · v2.0</div>
     </footer>
 
     <script>
